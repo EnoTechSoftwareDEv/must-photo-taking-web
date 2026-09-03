@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Photographers - StudentPhoto</title>
+
+<link rel="stylesheet"
+      href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="system-layout">
+
+
+<aside class="sidebar">
+
+<a href="index.html"
+   class="sidebar-logo">
+
+📸 Student<span>Photo</span>
+
+</a>
+
+
+<div class="admin-profile">
+
+<div class="admin-avatar">
+A
+</div>
+
+<div>
+
+<strong>
+Administrator
+</strong>
+
+<small>
+System Admin
+</small>
+
+</div>
+
+</div>
+
+
+<nav class="sidebar-nav">
+
+<a href="dashboard.html">
+🏠 Dashboard
+</a>
+
+<a href="students.html">
+👨‍🎓 Students
+</a>
+
+<a href="photographers.html"
+   class="active">
+
+📷 Photographers
+
+</a>
+
+<a href="bookings.html">
+📅 Bookings
+</a>
+
+<a href="gallery.html">
+🖼️ Gallery
+</a>
+
+</nav>
+
+
+<a href="index.html"
+   class="logout"
+   onclick="return confirmLogout()">
+
+↪ Logout
+
+</a>
+
+</aside>
+
+
+
+<main class="main-content">
+
+
+<div class="mobile-header">
+
+<button onclick="toggleSidebar()">
+☰
+</button>
+
+<strong>
+StudentPhoto
+</strong>
+
+</div>
+
+
+<div class="page-header">
+
+<div>
+
+<span class="badge">
+PHOTOGRAPHER MANAGEMENT
+</span>
+
+<h1>
+Photographers
+</h1>
+
+<p>
+Manage photographers and availability.
+</p>
+
+</div>
+
+</div>
+
+
+
+<section class="panel">
+
+
+<div class="panel-heading">
+
+<h2>
+Add Photographer
+</h2>
+
+</div>
+
+
+<form id="photographerForm"
+      class="form-grid">
+
+
+<div class="form-group">
+
+<label>
+Full Name
+</label>
+
+<input
+type="text"
+id="photographerName"
+placeholder="Photographer name"
+required>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+Phone Number
+</label>
+
+<input
+type="tel"
+id="photographerPhone"
+placeholder="07XXXXXXXX">
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+Email
+</label>
+
+<input
+type="email"
+id="photographerEmail"
+placeholder="example@email.com">
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+Specialization
+</label>
+
+<select id="photographerSpecialty">
+
+<option>
+Portrait Photography
+</option>
+
+<option>
+Graduation Photography
+</option>
+
+<option>
+Event Photography
+</option>
+
+<option>
+Passport Photography
+</option>
+
+<option>
+General Photography
+</option>
+
+</select>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+Availability
+</label>
+
+<select id="photographerStatus">
+
+<option>
+Available
+</option>
+
+<option>
+Busy
+</option>
+
+</select>
+
+</div>
+
+
+
+<div class="form-group">
+
+<button class="btn"
+        type="submit">
+
+Add Photographer
+
+</button>
+
+</div>
+
+
+</form>
+
+</section>
+
+
+
+<section class="panel">
+
+
+<div class="panel-heading">
+
+<h2>
+Photographer Records
+</h2>
+
+<input
+type="text"
+class="search-box"
+id="photographerSearch"
+placeholder="🔎 Search...">
+
+</div>
+
+
+<div id="photographerCards"
+     class="photographer-grid">
+
+</div>
+
+
+</section>
+
+
+</main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

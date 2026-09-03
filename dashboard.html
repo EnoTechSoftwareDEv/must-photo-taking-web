@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - StudentPhoto</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+
+<div class="system-layout">
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <a href="index.html" class="sidebar-logo">
+        📸 Student<span>Photo</span>
+    </a>
+
+
+    <div class="admin-profile">
+
+        <div class="admin-avatar">
+            A
+        </div>
+
+        <div>
+            <strong>Administrator</strong>
+
+            <small>
+                System Admin
+            </small>
+        </div>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <a href="dashboard.html"
+           class="active">
+            🏠 Dashboard
+        </a>
+
+        <a href="students.html">
+            👨‍🎓 Students
+        </a>
+
+        <a href="photographers.html">
+            📷 Photographers
+        </a>
+
+        <a href="bookings.html">
+            📅 Bookings
+        </a>
+
+        <a href="gallery.html">
+            🖼️ Gallery
+        </a>
+
+    </nav>
+
+
+    <a href="index.html"
+       class="logout"
+       onclick="return confirmLogout()">
+
+        ↪ Logout
+
+    </a>
+
+</aside>
+
+
+
+<!-- MAIN CONTENT -->
+
+<main class="main-content">
+
+
+<div class="mobile-header">
+
+    <button onclick="toggleSidebar()">
+        ☰
+    </button>
+
+    <strong>
+        StudentPhoto
+    </strong>
+
+</div>
+
+
+<div class="page-header">
+
+    <div>
+
+        <span class="badge">
+            OVERVIEW
+        </span>
+
+        <h1>
+            Dashboard
+        </h1>
+
+        <p>
+            Welcome back, Administrator.
+        </p>
+
+    </div>
+
+
+    <a href="bookings.html"
+       class="btn">
+
+        + New Booking
+
+    </a>
+
+</div>
+
+
+
+<!-- STATISTICS -->
+
+<div class="statistics">
+
+
+    <div class="stat-card">
+
+        <div class="stat-icon">
+            👨‍🎓
+        </div>
+
+        <small>
+            Total Students
+        </small>
+
+        <strong id="studentCount">
+            0
+        </strong>
+
+    </div>
+
+
+
+    <div class="stat-card">
+
+        <div class="stat-icon">
+            📷
+        </div>
+
+        <small>
+            Photographers
+        </small>
+
+        <strong id="photographerCount">
+            0
+        </strong>
+
+    </div>
+
+
+
+    <div class="stat-card">
+
+        <div class="stat-icon">
+            📅
+        </div>
+
+        <small>
+            Total Bookings
+        </small>
+
+        <strong id="bookingCount">
+            0
+        </strong>
+
+    </div>
+
+
+
+    <div class="stat-card">
+
+        <div class="stat-icon">
+            🖼️
+        </div>
+
+        <small>
+            Total Photos
+        </small>
+
+        <strong id="photoCount">
+            0
+        </strong>
+
+    </div>
+
+</div>
+
+
+
+<!-- QUICK ACTIONS -->
+
+<section class="panel">
+
+    <div class="panel-heading">
+
+        <h2>
+            Quick Actions
+        </h2>
+
+    </div>
+
+
+    <div class="quick-actions">
+
+        <a href="students.html">
+            <span>👨‍🎓</span>
+            Add Student
+        </a>
+
+        <a href="photographers.html">
+            <span>📷</span>
+            Add Photographer
+        </a>
+
+        <a href="bookings.html">
+            <span>📅</span>
+            New Booking
+        </a>
+
+        <a href="gallery.html">
+            <span>🖼️</span>
+            Upload Photo
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- RECENT BOOKINGS -->
+
+<section class="panel">
+
+    <div class="panel-heading">
+
+        <h2>
+            Recent Bookings
+        </h2>
+
+        <a href="bookings.html">
+            View All →
+        </a>
+
+    </div>
+
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Student
+                    </th>
+
+                    <th>
+                        Photographer
+                    </th>
+
+                    <th>
+                        Date
+                    </th>
+
+                    <th>
+                        Status
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="recentBookings">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+</main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

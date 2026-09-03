@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Bookings - StudentPhoto</title>
+
+<link rel="stylesheet"
+      href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="system-layout">
+
+
+<aside class="sidebar">
+
+<a href="index.html"
+   class="sidebar-logo">
+
+📸 Student<span>Photo</span>
+
+</a>
+
+
+<div class="admin-profile">
+
+<div class="admin-avatar">
+A
+</div>
+
+<div>
+
+<strong>
+Administrator
+</strong>
+
+<small>
+System Admin
+</small>
+
+</div>
+
+</div>
+
+
+<nav class="sidebar-nav">
+
+<a href="dashboard.html">
+🏠 Dashboard
+</a>
+
+<a href="students.html">
+👨‍🎓 Students
+</a>
+
+<a href="photographers.html">
+📷 Photographers
+</a>
+
+<a href="bookings.html"
+   class="active">
+
+📅 Bookings
+
+</a>
+
+<a href="gallery.html">
+🖼️ Gallery
+</a>
+
+</nav>
+
+
+<a href="index.html"
+   class="logout"
+   onclick="return confirmLogout()">
+
+↪ Logout
+
+</a>
+
+</aside>
+
+
+
+<main class="main-content">
+
+
+<div class="mobile-header">
+
+<button onclick="toggleSidebar()">
+☰
+</button>
+
+<strong>
+StudentPhoto
+</strong>
+
+</div>
+
+
+<div class="page-header">
+
+<div>
+
+<span class="badge">
+BOOKING MANAGEMENT
+</span>
+
+<h1>
+Photography Bookings
+</h1>
+
+<p>
+Create and manage photography appointments.
+</p>
+
+</div>
+
+</div>
+
+
+
+<section class="panel">
+
+
+<div class="panel-heading">
+
+<h2>
+Create New Booking
+</h2>
+
+</div>
+
+
+<form id="bookingForm"
+      class="form-grid">
+
+
+<div class="form-group">
+
+<label>
+Student
+</label>
+
+<select id="bookingStudent"
+        required>
+
+<option value="">
+Select Student
+</option>
+
+</select>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+Photographer
+</label>
+
+<select id="bookingPhotographer"
+        required>
+
+<option value="">
+Select Photographer
+</option>
+
+</select>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+Date
+</label>
+
+<input
+type="date"
+id="bookingDate"
+required>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+Time
+</label>
+
+<input
+type="time"
+id="bookingTime"
+required>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+Photography Type
+</label>
+
+<select id="bookingType">
+
+<option>
+Passport Photo
+</option>
+
+<option>
+Graduation Photography
+</option>
+
+<option>
+Portrait Photography
+</option>
+
+<option>
+Event Photography
+</option>
+
+</select>
+
+</div>
+
+
+
+<div class="form-group">
+
+<button class="btn"
+        type="submit">
+
+Create Booking
+
+</button>
+
+</div>
+
+
+</form>
+
+</section>
+
+
+
+<section class="panel">
+
+
+<div class="panel-heading">
+
+<h2>
+Booking Records
+</h2>
+
+</div>
+
+
+<div class="table-container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+Student
+</th>
+
+<th>
+Photographer
+</th>
+
+<th>
+Date
+</th>
+
+<th>
+Time
+</th>
+
+<th>
+Type
+</th>
+
+<th>
+Status
+</th>
+
+<th>
+Action
+</th>
+
+</tr>
+
+</thead>
+
+
+<tbody id="bookingTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+
+</section>
+
+
+</main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

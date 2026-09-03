@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Students - StudentPhoto</title>
+
+<link rel="stylesheet"
+      href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="system-layout">
+
+
+<aside class="sidebar">
+
+<a href="index.html"
+   class="sidebar-logo">
+
+📸 Student<span>Photo</span>
+
+</a>
+
+
+<div class="admin-profile">
+
+<div class="admin-avatar">
+A
+</div>
+
+<div>
+
+<strong>
+Administrator
+</strong>
+
+<small>
+System Admin
+</small>
+
+</div>
+
+</div>
+
+
+<nav class="sidebar-nav">
+
+<a href="dashboard.html">
+🏠 Dashboard
+</a>
+
+<a href="students.html"
+   class="active">
+
+👨‍🎓 Students
+
+</a>
+
+<a href="photographers.html">
+📷 Photographers
+</a>
+
+<a href="bookings.html">
+📅 Bookings
+</a>
+
+<a href="gallery.html">
+🖼️ Gallery
+</a>
+
+</nav>
+
+
+<a href="index.html"
+   class="logout"
+   onclick="return confirmLogout()">
+
+↪ Logout
+
+</a>
+
+</aside>
+
+
+
+<main class="main-content">
+
+
+<div class="mobile-header">
+
+<button onclick="toggleSidebar()">
+☰
+</button>
+
+<strong>
+StudentPhoto
+</strong>
+
+</div>
+
+
+<div class="page-header">
+
+<div>
+
+<span class="badge">
+STUDENT MANAGEMENT
+</span>
+
+<h1>
+Students
+</h1>
+
+<p>
+Register and manage student records.
+</p>
+
+</div>
+
+</div>
+
+
+
+<section class="panel">
+
+
+<div class="panel-heading">
+
+<h2>
+Register Student
+</h2>
+
+</div>
+
+
+<form id="studentForm"
+      class="form-grid">
+
+
+<div class="form-group">
+
+<label>
+Full Name
+</label>
+
+<input
+type="text"
+id="studentName"
+placeholder="Enter full name"
+required>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+Registration Number
+</label>
+
+<input
+type="text"
+id="studentReg"
+placeholder="Example: CS/001/2026"
+required>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+Gender
+</label>
+
+<select id="studentGender"
+        required>
+
+<option value="">
+Select Gender
+</option>
+
+<option>
+Male
+</option>
+
+<option>
+Female
+</option>
+
+</select>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+Course / Programme
+</label>
+
+<input
+type="text"
+id="studentCourse"
+placeholder="Example: Computer Science">
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+Year of Study
+</label>
+
+<select id="studentYear">
+
+<option>
+First Year
+</option>
+
+<option>
+Second Year
+</option>
+
+<option>
+Third Year
+</option>
+
+<option>
+Fourth Year
+</option>
+
+</select>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+Phone Number
+</label>
+
+<input
+type="tel"
+id="studentPhone"
+placeholder="07XXXXXXXX">
+
+</div>
+
+
+
+<div class="form-group full-width">
+
+<button class="btn"
+        type="submit">
+
+Register Student
+
+</button>
+
+</div>
+
+
+</form>
+
+</section>
+
+
+
+<section class="panel">
+
+
+<div class="panel-heading">
+
+<h2>
+Student Records
+</h2>
+
+
+<input
+type="text"
+class="search-box"
+id="studentSearch"
+placeholder="🔎 Search student...">
+
+</div>
+
+
+
+<div class="table-container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+#
+</th>
+
+<th>
+Name
+</th>
+
+<th>
+Registration No.
+</th>
+
+<th>
+Gender
+</th>
+
+<th>
+Course
+</th>
+
+<th>
+Year
+</th>
+
+<th>
+Phone
+</th>
+
+<th>
+Action
+</th>
+
+</tr>
+
+</thead>
+
+
+<tbody id="studentTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+
+</main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</ht
